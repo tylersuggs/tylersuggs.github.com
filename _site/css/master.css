@@ -70,6 +70,11 @@ span.timestamp {
 	color: #999;
 }
 
+div#meta {
+	margin: 10px 0px;
+	color: #999;
+}
+
 div#footer {
 	font-size: 14px;
 	color: #999;
