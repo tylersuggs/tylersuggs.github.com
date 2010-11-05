@@ -1,0 +1,27 @@
+body {
+	font: 14px/20px Arial, "Helvetica Neue", sans-serif;
+}
+
+div#wrapper {
+	margin: 0 auto;
+	width: 500px;
+}
+
+h1 {
+	font-weight: lighter;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	margin: 0px;
+	padding: 0px;
+}
+
+span.timestamp {
+	font-family: monospace;
+}
