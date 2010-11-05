@@ -1,19 +1,40 @@
+* {
+    font-size: 1em;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
 body {
 	font: 14px/20px Arial, "Helvetica Neue", sans-serif;
+	margin-top: 50px;
+	color: #333;
 }
 
 div#wrapper {
 	margin: 0 auto;
-	width: 500px;
+	width: 530px;
 }
 
 h1 {
 	font-weight: lighter;
+	font-size: 33px;
+	line-height: 1em;
+	text-shadow: #bbb 1px 1px 1px;
+}
+
+h1 span {
+	font-size: 20px;
+	color: #aaa;
+	text-shadow: none;
 }
 
 ul {
 	list-style-type: none;
-	margin: 0px;
+	margin: 20px 0px;
 	padding: 0px;
 }
 
@@ -22,6 +43,29 @@ li {
 	padding: 0px;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: black;
+}
+
+p {
+	margin: 10px 0px;
+}
+
+blockquote {
+	display: block;
+	padding-left: 10px;
+	border-left: 3px solid #ddd;
+}
+
 span.timestamp {
 	font-family: monospace;
+	color: #999;
 }
