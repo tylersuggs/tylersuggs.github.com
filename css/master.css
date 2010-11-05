@@ -69,3 +69,8 @@ span.timestamp {
 	font-family: monospace;
 	color: #999;
 }
+
+div#footer {
+	font-size: 14px;
+	color: #999;
+}
