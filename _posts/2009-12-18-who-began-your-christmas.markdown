@@ -22,8 +22,9 @@ From Mikey:
 >The rest of the trip down the elevator was pretty quiet.
 >
 >Don't forget this year to keep the One who started this whole Christmas thing in your every thought, deed, purchase, and word.
+>
+>If we all did it, just think of how different this whole world would be. (Luke 2:1-20)
 
-If we all did it, just think of how different this whole world would be. (Luke 2:1-20)
 The moral of this story? Who began YOUR Christmas and what are you doing to PROVE it?
 
 Think about it.
