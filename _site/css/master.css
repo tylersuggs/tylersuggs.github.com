@@ -59,6 +59,17 @@ p {
 	margin: 10px 0px;
 }
 
+p a {
+	text-decoration: inherit;
+	color: inherit;
+	border-bottom: 1px dotted #333;
+	font-weight: bold;
+}
+
+p a:hover {
+	text-decoration: none;
+}
+
 blockquote {
 	display: block;
 	padding-left: 10px;
