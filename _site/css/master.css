@@ -17,6 +17,7 @@ body {
 div#wrapper {
 	margin: 0 auto;
 	width: 530px;
+	postion: absolute;
 }
 
 h1 {
@@ -68,6 +69,7 @@ p a {
 
 p a:hover {
 	text-decoration: none;
+	text-shadow: #bbb 1px 1px 1px;
 }
 
 blockquote {
@@ -91,4 +93,65 @@ div#footer {
 	color: #999;
 	border-top: 3px solid #ddd;
 	padding-top: 10px;
+}
+
+.dsq-brlink { display: none; }
+
+#home {
+	position: relative;
+	text-align: center;
+}
+
+#home a {
+	position: absolute;
+	/*top:100px;
+	left:-35px;
+	top: 78px;
+	left:-30px;*/
+	top: -35px;
+	width: 100%;
+/*	-webkit-transform: rotate(270deg);
+	-webkit-transform-origin: 0 0;*/
+	z-index: 10;
+	display: block;
+	font-size: 1.3em;
+	color: #bbb;
+}
+
+#home a:hover {
+	text-decoration: underline;
+}
+
+@media print {
+	#disqus_thread, #home {
+		display: none;
+	}
+	
+	body {
+		margin: 0;
+	}
+	
+	body > div#wrapper {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	
+	p a {
+		font-weight: normal;
+		border-bottom-style: solid;
+	}
+	
+	p a:after { 
+		content: " (" attr(href) ") ";
+		font-size: 90%;
+	}
+	
+	h1 {
+		text-shadow: none;
+	}
+	
+	div#footer span {
+		font-size: 90%;
+	}
 }
