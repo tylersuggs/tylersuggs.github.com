@@ -20,4 +20,4 @@ At times we become Closet Boy in our own lives; when we construct our goals and 
 
 You see, by releasing ourselves to God's Will, we are opening our lives to opportunities that we couldn't otherwise predict to be possible. The world is finite and limited. God, however, is infinite
 
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://www.youtube.com/v/MiwN_4noPLI" /><param name="align" value="top" /><embed type="application/x-shockwave-flash" width="425" height="350" src="http://www.youtube.com/v/MiwN_4noPLI" align="top"></embed></object>
+[Play Video: Empty](http://www.youtube.com/watch?v=MiwN_4noPLI){:rel=fancyvideo}
