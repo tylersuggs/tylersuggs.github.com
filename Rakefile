@@ -1,31 +1,17 @@
-require 'rubygems'
-require 'json'
-require 'open-uri'
-
-API_URL = "http://tysug.gs/yourls-api.php"
-API_SIG = "23808a8d51"
+require "_scripts/twitter"
 
 def jekyll(opts = "")
   sh "jekyll " + opts
 end
 
-def short_url(url)
-  uri = URI.parse("#{API_URL}?signature=#{API_SIG}&action=shorturl&url=#{url}&format=json")
-  json = JSON.parse(uri.open.read)
-
-  return false unless json.has_key? 'shorturl'
-  
-  json['shorturl']
-end
-
-
 def publish(file)
   return false unless File.exists?(file)
   prefix = File.dirname(__FILE__)
-  date = Time.new.strftime("%Y-%m-%d")
-  base = File.basename file
+  date = Time.new
+  base = File.basename file, File.extname file
+  slug = "#{date.strftime("%Y/%m/%d")}/#{base}/"
   
-  FileUtils.mv File.join(prefix, file), File.join(prefix, "_posts/#{date}-#{base}")
+  FileUtils.mv File.join(prefix, file), File.join(prefix, "_posts/#{date.strftime("%Y-%m-%d")}-#{base}")
 end
 
 def slugify(title)
@@ -39,24 +25,17 @@ end
 
 namespace :post do
   desc "Create new post"
-  task :new do
-    print "Post title: "
-    title = $stdin.gets.chomp.strip
+  task :new => [:require_input] do
+    title = ask("Title: ")
     name = slugify(title)
-    fn = "_drafts/#{name}.md"
-    File.open(fn, "w+") do |file|
-      file.puts <<-EOF
---- 
-title: #{title}
-layout: post
-tags:
----
-        EOF
+    furi = "_drafts/#{name}.md"
+    template = File.read "_lib/post_template.md"
+    File.open(furi, "w+") do |f|
+      f << template.gsub(/POST_TITLE/, title)
       end
-      $stdout.puts "Created #{fn}"
-      system("mate", ".")
-      system("mate", "-l 6", fn)
-      system "git", "add", ".")
+      $stdout.puts "Created Draft: #{title}"
+      sh "mate . && mate -l 6 #{furi}"
+      sh "git add #{furi}"
   end
   
   desc "Publish draft post"
@@ -73,5 +52,14 @@ tags:
     else
       puts "FAIL!"
     end
+  end
+end
+
+task :require_input do
+  begin
+    require 'highline/import'
+  rescue LoadError => e
+    puts "\n - FATAL: highline gem is required."
+    exit(1)
   end
 end
