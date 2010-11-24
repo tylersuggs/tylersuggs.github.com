@@ -4,37 +4,63 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>LivingProof</title>
 	<link rel="stylesheet" href="/css/master.css" type="text/css" media="all" charset="utf-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.history.js"></script>
+	
+	<script>
+		$(document).ready(function($) {
+			function load(pg) {
+				$('#post-content').load(pg);
+			}
+			$.history.init(function(url){
+				load(url == "" ? "/2009/12/18/who-began-your-christmas/" : url);
+			},
+			{ unescape: true });
+			
+			//$("#post-content").load("/2009/12/18/who-began-your-christmas/");
+		    $("#post-list > ul > li > a").live('click', function(event){
+				var url = $(this).attr("href");
+				url = url.replace(/^.*#/, '');
+				$.history.load(url);
+		        //$("#post-content").load($(this).attr("href"));
+				event.preventDefault();
+		    });
+		});
+	
+
+     //alert("Hello world!");
+
+	</script>
 </head>
 <body>
 	<div id="wrapper">
-		<h1>LivingProof <span>Are YOU living proof?</span></h1>
+		<div id='post-list'>
 <ul>
 
-<li><span class="timestamp">18 Dec 2009</span> <a href="/2009/12/18/who-began-your-christmas/">Who Began YOUR Christmas?</a></li>
+<li><span class="timestamp">18 Dec 2009</span> <br><a href="#/2009/12/18/who-began-your-christmas/">Who Began YOUR Christmas?</a></li>
 
-<li><span class="timestamp">31 Jul 2009</span> <a href="/2009/07/31/the-tale-of-the-good-samaritan/">The Tale of the Good Samaritan</a></li>
+<li><span class="timestamp">31 Jul 2009</span> <br><a href="#/2009/07/31/the-tale-of-the-good-samaritan/">The Tale of the Good Samaritan</a></li>
 
-<li><span class="timestamp">14 Jul 2009</span> <a href="/2009/07/14/digital-disciples-a-local-gathering-a-global-network/">Digital Disciples: A Local Gathering. A Global Network.</a></li>
+<li><span class="timestamp">14 Jul 2009</span> <br><a href="#/2009/07/14/digital-disciples-a-local-gathering-a-global-network/">Digital Disciples: A Local Gathering. A Global Network.</a></li>
 
-<li><span class="timestamp">09 Jul 2009</span> <a href="/2009/07/09/possibly-the-most-difficult-blog-post-ive-ever-written/">Possibly the Most Difficult Blog Post I've Ever Written</a></li>
+<li><span class="timestamp">09 Jul 2009</span> <br><a href="#/2009/07/09/possibly-the-most-difficult-blog-post-ive-ever-written/">Possibly the Most Difficult Blog Post I've Ever Written</a></li>
 
-<li><span class="timestamp">04 Jul 2009</span> <a href="/2009/07/04/a-night-to-remember/">A Night to Remember</a></li>
+<li><span class="timestamp">04 Jul 2009</span> <br><a href="#/2009/07/04/a-night-to-remember/">A Night to Remember</a></li>
 
-<li><span class="timestamp">26 May 2009</span> <a href="/2009/05/26/heavens-next-best-seller/">Heaven's Next Best Seller</a></li>
+<li><span class="timestamp">26 May 2009</span> <br><a href="#/2009/05/26/heavens-next-best-seller/">Heaven's Next Best Seller</a></li>
 
-<li><span class="timestamp">17 May 2009</span> <a href="/2009/05/17/closet-boy%25e2%2584%25a2/">Closet Boy™</a></li>
+<li><span class="timestamp">17 May 2009</span> <br><a href="#/2009/05/17/closet-boy/">Closet Boy</a></li>
 
-<li><span class="timestamp">08 May 2009</span> <a href="/2009/05/08/my-new-ride/">My New Ride</a></li>
+<li><span class="timestamp">08 May 2009</span> <br><a href="#/2009/05/08/my-new-ride/">My New Ride</a></li>
 
-<li><span class="timestamp">12 Apr 2009</span> <a href="/2009/04/12/im-so-proud/">I'm so proud!!!</a></li>
+<li><span class="timestamp">12 Apr 2009</span> <br><a href="#/2009/04/12/im-so-proud/">I'm so proud!!!</a></li>
 
-<li><span class="timestamp">10 Apr 2009</span> <a href="/2009/04/10/is-there-a-doctor-in-the-house/">Is there a doctor in the house???</a></li>
+<li><span class="timestamp">10 Apr 2009</span> <br><a href="#/2009/04/10/is-there-a-doctor-in-the-house/">Is there a doctor in the house???</a></li>
 
 </ul>
-		
-		<div id="footer">
-			<span>&copy; G. Tyler Suggs</span>
-		</div>
+</div>
+<div id="post-content"></div>
+
 	</div>
 	<script type="text/javascript">
 	    var GoSquared={};

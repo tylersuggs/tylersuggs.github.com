@@ -4,14 +4,37 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>{{ page.title }}</title>
 	<link rel="stylesheet" href="/css/master.css" type="text/css" media="all" charset="utf-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.history.js"></script>
+	{% assign firstpost = site.posts.first %}
+	<script>
+		$(document).ready(function($) {
+			function load(pg) {
+				$('#post-content').load(pg);
+			}
+			$.history.init(function(url){
+				load(url == "" ? "{{ firstpost.url }}" : url);
+			},
+			{ unescape: true });
+			
+			//$("#post-content").load("{{ firstpost.url }}");
+		    $("#post-list > ul > li > a").live('click', function(event){
+				var url = $(this).attr("href");
+				url = url.replace(/^.*#/, '');
+				$.history.load(url);
+		        //$("#post-content").load($(this).attr("href"));
+				event.preventDefault();
+		    });
+		});
+	
+
+     //alert("Hello world!");
+
+	</script>
 </head>
 <body>
 	<div id="wrapper">
 		{{ content }}
-		
-		<div id="footer">
-			<span>&copy; G. Tyler Suggs</span>
-		</div>
 	</div>
 	<script type="text/javascript">
 	    var GoSquared={};
