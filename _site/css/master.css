@@ -10,13 +10,13 @@
 
 body {
 	font: 14px/20px Arial, "Helvetica Neue", sans-serif;
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 	color: #333;
 }
 
 div#wrapper {
 	margin: 0 auto;
-	width: 530px;
+	/*width: 530px;*/
 	postion: absolute;
 }
 
@@ -35,7 +35,7 @@ h1 span {
 
 ul {
 	list-style-type: none;
-	margin: 20px 0px;
+	/*margin: 20px 0px;*/
 	padding: 0px;
 }
 
@@ -76,6 +76,23 @@ blockquote {
 	display: block;
 	padding-left: 10px;
 	border-left: 3px solid #ddd;
+}
+
+div#post-list {
+	width: 230px;
+	float: left;
+	margin-left: 10px;
+	padding-top: 20px;
+	position: fixed;
+}
+
+div#post-content {
+	margin-left: 250px;
+	padding-left: 20px;
+	padding-top: 20px;
+	width: 800px;
+	border-left: 2px solid #ddd;
+	height: 100%;
 }
 
 span.timestamp {
