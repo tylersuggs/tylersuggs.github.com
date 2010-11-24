@@ -17,19 +17,13 @@
 			},
 			{ unescape: true });
 			
-			//$("#post-content").load("{{ firstpost.url }}");
 		    $("#post-list > ul > li > a").live('click', function(event){
 				var url = $(this).attr("href");
 				url = url.replace(/^.*#/, '');
 				$.history.load(url);
-		        //$("#post-content").load($(this).attr("href"));
 				event.preventDefault();
 		    });
 		});
-	
-
-     //alert("Hello world!");
-
 	</script>
 </head>
 <body>
