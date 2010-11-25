@@ -9,27 +9,21 @@
 	
 	<script>
 		$(document).ready(function($) {
-			function load(pg) {
-				$('#post-content').load(pg);
+			function load(post) {
+				$('#post-content').load(post);
 			}
 			$.history.init(function(url){
 				load(url == "" ? "/2009/12/18/who-began-your-christmas/" : url);
 			},
 			{ unescape: true });
 			
-			//$("#post-content").load("/2009/12/18/who-began-your-christmas/");
 		    $("#post-list > ul > li > a").live('click', function(event){
 				var url = $(this).attr("href");
 				url = url.replace(/^.*#/, '');
 				$.history.load(url);
-		        //$("#post-content").load($(this).attr("href"));
 				event.preventDefault();
 		    });
 		});
-	
-
-     //alert("Hello world!");
-
 	</script>
 </head>
 <body>
