@@ -22,6 +22,7 @@
 				document.getElementsByTagName('body')[0]).removeChild(oldDsq);*/
 			$('script[src*="disqus.com"]').remove();
 			$('link[href*="disqus.com"]').remove();
+			$('iframe[href*="disqus.com"]').remove();
 		}
 
         var dsq = document.createElement('script');
