@@ -20,6 +20,7 @@
 		if(oldDsq) { 
 			/*(document.getElementsByTagName('head')[0] || 
 				document.getElementsByTagName('body')[0]).removeChild(oldDsq);*/
+			$('script[id="dsq-script"] + style').remove();
 			$('script[src*="disqus.com"]').remove();
 			$('link[href*="disqus.com"]').remove();
 			$('iframe[href*="disqus.com"]').remove();
