@@ -1,5 +1,3 @@
-require "_scripts/twitter"
-
 def jekyll(opts = "")
   sh "jekyll " + opts
 end
@@ -8,7 +6,7 @@ def publish(file)
   return false unless File.exists?(file)
   prefix = File.dirname(__FILE__)
   date = Time.new
-  base = File.basename file, File.extname file
+  base = File.basename(file, File.extname(file))
   slug = "#{date.strftime("%Y/%m/%d")}/#{base}/"
   
   FileUtils.mv File.join(prefix, file), File.join(prefix, "_posts/#{date.strftime("%Y-%m-%d")}-#{base}")

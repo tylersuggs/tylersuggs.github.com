@@ -15,7 +15,19 @@
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		// Remove the old script if it's found 
+		oldDsq = $('dsq-script'); 
+		if(oldDsq) { 
+			/*(document.getElementsByTagName('head')[0] || 
+				document.getElementsByTagName('body')[0]).removeChild(oldDsq);*/
+			$('script[src*="disqus.com"]').remove();
+			$('link[href*="disqus.com"]').remove();
+		}
+
+        var dsq = document.createElement('script');
+		dsq.id = "dsq-script"
+		dsq.type = 'text/javascript';
+		dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
