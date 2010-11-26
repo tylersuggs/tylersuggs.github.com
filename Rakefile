@@ -9,7 +9,7 @@ def publish(file)
   base = File.basename(file, File.extname(file))
   slug = "#{date.strftime("%Y/%m/%d")}/#{base}/"
   
-  FileUtils.mv File.join(prefix, file), File.join(prefix, "_posts/#{date.strftime("%Y-%m-%d")}-#{base}")
+  FileUtils.mv File.join(prefix, file), File.join(prefix, "_posts/#{date.strftime("%Y-%m-%d")}-#{base}.md")
 end
 
 def slugify(title)

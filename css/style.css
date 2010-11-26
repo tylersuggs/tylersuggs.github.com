@@ -72,7 +72,7 @@ p a:hover {
 blockquote {
 	display: block;
 	padding-left: 10px;
-	border-left: 3px solid #ddd;
+	border-left: 2px dashed #ddd;
 }
 
 div#post-list {
@@ -109,6 +109,23 @@ div#post-list span#rss a {
 div#post-list span#rss a:hover {
 	background: url('/images/rss_icon_o.png') no-repeat;
 	opacity: 0.75;
+}
+
+div#post-list #footer {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #999;
+}
+
+div#post-list #footer a {
+	color: #999;
+	border-bottom: 1px dotted #999;
+}
+
+div#post-list #footer a:hover {
+	text-shadow: #bbb 1px 1px 1px;
 }
 
 div#post-content {
