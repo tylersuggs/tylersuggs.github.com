@@ -77,10 +77,14 @@ blockquote {
 
 div#post-list {
 	width: 230px;
-	float: left;
 	margin-left: 10px;
 	padding-top: 20px;
-	position: fixed;
+	padding-right: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	border-right: 2px solid #ddd;
 }
 
 div#post-list ul {
@@ -102,7 +106,6 @@ div#post-content {
 	padding-left: 20px;
 	padding-top: 20px;
 	width: 800px;
-	border-left: 2px solid #ddd;
 	height: 100%;
 }
 
