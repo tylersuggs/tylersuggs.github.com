@@ -96,7 +96,7 @@ div#post-list ul li {
 }
 
 div#post-list span#rss {
-	position: fixed;
+	position: absolute;
 	top: 25px;
 	left: 200px;
 }
