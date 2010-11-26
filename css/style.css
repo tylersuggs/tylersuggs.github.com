@@ -80,7 +80,7 @@ div#post-list {
 	margin-left: 10px;
 	padding-top: 20px;
 	padding-right: 10px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -95,10 +95,20 @@ div#post-list ul li {
 	margin-bottom: 7px;
 }
 
-div#post-list span#rss {
+div#post-list span#rss a {
+	display: block;
+	width: 23px;
+	height: 23px;
+	background: url('/images/rss_icon_o.png') no-repeat;
+	opacity: 0.5;
 	position: absolute;
 	top: 25px;
-	left: 200px;
+	left: 180px;
+}
+
+div#post-list span#rss a:hover {
+	background: url('/images/rss_icon_o.png') no-repeat;
+	opacity: 0.75;
 }
 
 div#post-content {
