@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thorns
+title: Blessed by Thorns
 ---
 I'm almost certain that this year's Thanksgiving edition of [Mikey's Funnies](http://mikeysfunnies.com) was written specifically to me. It includes a tale that is not only sad and thought-provoking, but stings personally and yet, has left me quite encouraged. Check it out:
 
