@@ -132,8 +132,10 @@ div#post-list #footer a:hover {
 div#post-content {
 	margin-left: 250px;
 	padding-left: 20px;
+	padding-right: 20px;
 	padding-top: 20px;
-	width: 800px;
+	min-width: 700px;
+	max-width: 800px;
 	height: 100%;
 }
 
