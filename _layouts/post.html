@@ -20,7 +20,9 @@
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     var disqus_identifier = '{{ page.id }}';
-    var disqus_url = '{{ page.url }}';
+    var disqus_url = '/#{{ page.url }}';
+	var disqus_title = '{{ page.title }}';
+	var disqus_developer = 1;
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
