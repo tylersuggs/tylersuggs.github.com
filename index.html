@@ -2,14 +2,34 @@
 layout: default
 title: LivingProof
 ---
-<div id='post-list'>
-	<h1>LivingProof</h1>
-	<span id="rss"><a href="http://feeds.feedburner.com/livingproof/feed"></a></span>
-	<ul>
-		{% for post in site.posts %}
-		<li><span class="timestamp">{{ post.date | date_to_string }}</span> <br><a href="#{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}
-	</ul>
-	<div id="footer">&copy 2010 G. Tyler Suggs. Powered by <a href="http://jekyllrb.com">Jekyll</a>.</div>
+{% assign firstpost = site.posts.first %}
+<h1>{{ firstpost.title }}</h1>
+<div id="meta">Posted on {{ firstpost.date | date_to_string }}</div>
+<div id="post">
+{{ firstpost.content }}
 </div>
-<div id="post-content"></div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lpus'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = "{{ firstpost.id }}";
+    var disqus_url = '/#{{ firstpost.url }}';
+	var disqus_title = "{{ firstpost.title }}";
+	var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script');
+		dsq.id = "dsq-script"
+		dsq.type = 'text/javascript';
+		dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+

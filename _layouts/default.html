@@ -7,32 +7,23 @@
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" charset="utf-8">
 	<link rel="stylesheet" href="/css/jquery.fancybox-1.3.4.css" type="text/css" media="screen" charset="utf-8">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.history.js"></script>
 	<script type="text/javascript" src="/js/jquery.fancybox-1.3.4.pack.js"></script>
-	{% assign firstpost = site.posts.first %}
-	<script>
-		$(document).ready(function($) {
-			function load(post) {
-				$('#post-content').load(post);
-			}
-			$.history.init(function(url){
-				load(url == "" ? "{{ firstpost.url }}" : url);
-			},
-			{ unescape: true });
-			
-		    $("#post-list > ul > li > a").live('click', function(event){
-				var url = $(this).attr("href");
-				url = url.replace(/^.*#/, '');
-				$.history.load(url);
-				event.preventDefault();
-		    });
-		});
-		
-	</script>
 </head>
 <body>
 	<div id="wrapper">
+		<div id='post-list'>
+			<h1>LivingProof</h1>
+			<span id="rss"><a href="http://feeds.feedburner.com/livingproof/feed"></a></span>
+			<ul>
+				{% for post in site.posts %}
+				<li><span class="timestamp">{{ post.date | date_to_string }}</span> <br><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+			<div id="footer">&copy 2010 G. Tyler Suggs. Powered by <a href="http://jekyllrb.com">Jekyll</a>.</div>
+		</div>
+		<div id="post-content">
 		{{ content }}
+		</div>
 	</div>
 	<script type="text/javascript">
 	    var GoSquared={};
@@ -45,5 +36,14 @@
 	        }
 	        w.addEventListener?w.addEventListener("load",gs,false):w.attachEvent("onload",gs);
 	    })(window);
+	</script>
+	<script type="text/javascript">
+		$('.fancyquote').fancybox({
+			'width': '75%',
+			'height': '75%',
+			'autoScale': false,
+			'autoDimensions': false,
+			'titlePosition': 'inside'
+		});
 	</script>
 </body>
