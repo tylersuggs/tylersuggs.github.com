@@ -1,12 +1,6 @@
-<script type="text/javascript">
-	$('.fancyquote').fancybox({
-		'width': '75%',
-		'height': '75%',
-		'autoScale': false,
-		'autoDimensions': false,
-		'titlePosition': 'inside'
-	});
-</script>
+---
+layout: default
+---
 <h1>{{ page.title }}</h1>
 <div id="meta">Posted on {{ page.date | date_to_string }}</div>
 <div id="post">
@@ -21,12 +15,13 @@
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
     var disqus_identifier = "{{ page.id }}";
-    var disqus_url = '/#{{ page.url }}';
+    var disqus_url = '{{ page.url }}';
 	var disqus_title = "{{ page.title }}";
 	var disqus_developer = 1;
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
+<<<<<<< HEAD
 		// Remove the old script if it's found
 		oldDsq = $('dsq-script');
         if(oldDsq) {
@@ -37,6 +32,14 @@
         }
 
         $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js');
+=======
+        var dsq = document.createElement('script');
+		dsq.id = "dsq-script"
+		dsq.type = 'text/javascript';
+		dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+>>>>>>> noajax
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
