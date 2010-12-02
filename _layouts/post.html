@@ -21,25 +21,12 @@ layout: default
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
-<<<<<<< HEAD
-		// Remove the old script if it's found
-		oldDsq = $('dsq-script');
-        if(oldDsq) {
-			$('script[id="dsq-script"] + style').remove();
-			$('script[src*="disqus.com"]').remove();
-            $('link[href*="disqus.com"]').remove();
-            $('iframe[src*="disqus.com"]').remove();
-        }
-
-        $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js');
-=======
         var dsq = document.createElement('script');
 		dsq.id = "dsq-script"
 		dsq.type = 'text/javascript';
 		dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
->>>>>>> noajax
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
