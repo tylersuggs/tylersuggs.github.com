@@ -90,6 +90,11 @@ div#post-content {
 	overflow: auto;
 }
 
+div#post-content #disqus_thread {
+	min-width: 700px;
+	max-width: 800px;
+}
+
 div#sidebar {
 	width: 230px;
 	position: absolute;
