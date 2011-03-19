@@ -147,12 +147,12 @@ div#sidebar span#rss a:hover {
 	background: #fff;
 }
 
-div#sidebar #footer a {
+#footer a {
 	color: #999;
 	border-bottom: 1px dotted #999;
 }
 
-div#sidebar #footer a:hover {
+#footer a:hover {
 	text-shadow: #bbb 1px 1px 1px;
 }
 
