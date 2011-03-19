@@ -30,10 +30,10 @@ namespace :post do
     template = File.read "_lib/post_template.md"
     File.open(furi, "w+") do |f|
       f << template.gsub(/POST_TITLE/, title)
-      end
-      $stdout.puts "Created Draft: #{title}"
-      sh "mate . && mate -l 6 #{furi}"
-      sh "git add #{furi}"
+    end
+    $stdout.puts "Created Draft: #{title}"
+    sh "mate . && mate -l 6 #{furi}"
+    sh "git add #{furi}"
   end
   
   desc "Publish draft post"
