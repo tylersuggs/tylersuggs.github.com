@@ -147,6 +147,10 @@ div#sidebar span#rss a:hover {
 	background: #fff;
 }
 
+#footer span#cc {
+	font-face: 'CC-Icons';
+}
+
 #footer a {
 	color: #999;
 	border-bottom: 1px dotted #999;
@@ -168,6 +172,15 @@ div#meta {
 }
 
 .dsq-brlink { display: none; }
+
+@font-face {
+    font-family: 'CC-Icons';
+    src: url('cc-icons-webfont.eot');
+    src: local('CC Icons'), 
+         local('cc-icons'), 
+         url('cc-icons-webfont.ttf') format('truetype'),
+         url('cc-icons-webfont.svg#font') format('svg'); 
+}
 
 @media print {
 	#disqus_thread, #sidebar {
