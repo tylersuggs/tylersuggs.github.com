@@ -35,5 +35,7 @@ $(function()
 			);
 		}
 	)
+	
+	$('post-content').touchScroll();
 
 });
