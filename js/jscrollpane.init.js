@@ -34,7 +34,7 @@ $(function()
 				}
 			);
 		}
-	)
+	);
 	
 	$('post-content').touchScroll();
 
