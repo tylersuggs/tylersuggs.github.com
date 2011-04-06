@@ -34,8 +34,5 @@ $(function()
 				}
 			);
 		}
-	);
-	
-	$('post-content').touchScroll();
-
+	)
 });
