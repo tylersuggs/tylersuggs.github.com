@@ -12,11 +12,15 @@ body {
 	font: 14px/20px Arial, "Helvetica Neue", sans-serif;
 	color: #333;
 	border: 0 none;
-    height: 100%;
+    /*height: 100%;*/
     margin: 0;
-    max-height: 100%;
+    /*max-height: 100%;*/
     overflow: hidden;
     padding: 0;
+}
+
+#wrapper {
+	display: block;
 }
 
 h1 {
@@ -88,6 +92,10 @@ div#post-content {
 	padding-right: 20px;
 	padding-top: 20px;
 	overflow: auto;
+	display: block;
+	height: 100%;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
 }
 
 div#post-content #disqus_thread {
@@ -112,7 +120,7 @@ div#post-list {
 	left: 0px;
 	top: 50px;
 	bottom: 20px;
-	overflow: auto;
+	overflow: hidden !important;
 	margin-top: 20px;
 }
 
@@ -180,80 +188,4 @@ div#meta {
          local('cc-icons'), 
          url('cc-icons-webfont.ttf') format('truetype'),
          url('cc-icons-webfont.svg#font') format('svg'); 
-}
-
-@media print {
-	#disqus_thread, #sidebar {
-		display: none;
-	}
-	
-	html, body, #wrapper, div#post-content {
-		position: static;
-		left: 0;
-		bottom: 0;
-		margin: 0;
-		padding: 0;
-		font-size: 10pt;
-	}
-	
-	#footer {
-		font-size: 10pt;
-		bottom: -50px;
-		width: 100%;
-		border-top: 1px solid #ccc;
-		border-bottom: 1px solid #ccc;
-		text-align: center;
-	}
-	
-	p {
-		max-width: 100%;
-		min-width: 10%;
-	}
-	
-	p a {
-		font-weight: normal;
-		border-bottom-style: solid;
-	}
-	
-	p a:after { 
-		content: " (" attr(href) ") ";
-		font-size: 90%;
-	}
-	
-	p a[href^="/"]:after {
-		content: " (http://www.alistapart.com" attr(href) ") ";
-	}
-	
-	h1 {
-		font-size: 18pt;
-		text-shadow: none;
-	}
-	
-/*	body {
-		margin: 0;
-	}
-	
-	body > div#wrapper {
-		width: 100%;
-		height: 100%;
-		margin: 0;
-	}
-	
-	p a {
-		font-weight: normal;
-		border-bottom-style: solid;
-	}
-	
-	p a:after { 
-		content: " (" attr(href) ") ";
-		font-size: 90%;
-	}
-	
-	h1 {
-		text-shadow: none;
-	}
-	
-	div#footer span {
-		font-size: 90%;
-	}*/
 }

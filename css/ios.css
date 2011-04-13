@@ -1,0 +1,16 @@
+body, #wrapper {
+	height: 0 !important;
+	max-height: auto !important;
+	overflow: auto !important;
+	}
+
+#sidebar {
+	position: absolute;
+	left: -1000px !important;
+}
+
+#post-content {
+	position: fixed !important;
+	top: 0;
+	left: 0px !important;
+}

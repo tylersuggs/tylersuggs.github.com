@@ -1,0 +1,75 @@
+@media print {
+	#disqus_thread, #sidebar {
+		display: none;
+	}
+	
+	html, body, #wrapper, div#post-content {
+		position: static;
+		left: 0;
+		bottom: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 10pt;
+	}
+	
+	#footer {
+		font-size: 10pt;
+		bottom: -50px;
+		width: 100%;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+	}
+	
+	p {
+		max-width: 100%;
+		min-width: 10%;
+	}
+	
+	p a {
+		font-weight: normal;
+		border-bottom-style: solid;
+	}
+	
+	p a:after { 
+		content: " (" attr(href) ") ";
+		font-size: 90%;
+	}
+	
+	p a[href^="/"]:after {
+		content: " (http://www.alistapart.com" attr(href) ") ";
+	}
+	
+	h1 {
+		font-size: 18pt;
+		text-shadow: none;
+	}
+	
+/*	body {
+		margin: 0;
+	}
+	
+	body > div#wrapper {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	
+	p a {
+		font-weight: normal;
+		border-bottom-style: solid;
+	}
+	
+	p a:after { 
+		content: " (" attr(href) ") ";
+		font-size: 90%;
+	}
+	
+	h1 {
+		text-shadow: none;
+	}
+	
+	div#footer span {
+		font-size: 90%;
+	}*/
+}
