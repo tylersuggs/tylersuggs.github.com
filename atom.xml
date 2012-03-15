@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>LivingProof</title>
- <link href="http://livingproof.us/atom.xml" rel="self"/>
- <link href="http://livingproof.us/"/>
+ <link href="http://tysug.gs/atom.xml" rel="self"/>
+ <link href="http://tysug.gs/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://livingproof.us/</id>
+ <id>http://tysug.gs/</id>
  <author>
    <name>G. Tyler Suggs</name>
    <email>ty@livingproof.us</email>
@@ -17,7 +17,7 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://livingproof.us/#{{ post.url }}"/>
+   <link href="http://tysug.gs/#{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://livingproof.us{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
