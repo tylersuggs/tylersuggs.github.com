@@ -1,17 +1,15 @@
 safe:        false
-auto:        false
-server:      false
-server_port: 4000
+port: 4000
 
 source:      .
 destination: ./_site
-plugins:     ./_plugins
+plugins_dir:     ./_plugins
 encoding: UTF-8
 
 future:      true
 lsi:         false
-pygments:    false
-markdown:    maruku
+highlighter:    pygments
+markdown:    kramdown
 permalink:   pretty
 
 maruku:
@@ -24,4 +22,4 @@ maruku:
 rdiscount:
   extensions: []
 
-exclude:      Rakefile
+exclude:      ['Rakefile']
