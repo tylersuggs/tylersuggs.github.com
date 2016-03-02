@@ -6,6 +6,7 @@ server_port: 4000
 source:      .
 destination: ./_site
 plugins:     ./_plugins
+encoding: UTF-8
 
 future:      true
 lsi:         false
